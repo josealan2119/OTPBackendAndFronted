@@ -1,0 +1,163 @@
+/* Contenedor principal */
+.login-contenedor {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sección izquierda (bienvenida) */
+.seccion-bienvenida {
+  flex: 1;
+  background: linear-gradient(270deg, #6a0dad, #ff66b2, #ff6600, #ffcc33);
+  background-size: 800% 800%; /* tamaño grande para animación suave */
+  animation: gradientAnimation 20s ease infinite; /* animación lenta */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+}
+
+.seccion-bienvenida h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.seccion-bienvenida p {
+  font-size: 20px;
+  max-width: 400px;
+}
+
+/* Animación de movimiento grande del gradiente */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sección derecha (login / registro) */
+.seccion-login {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-login h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+input {
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border 0.3s;
+  width: 100%;
+  text-align: center;
+}
+
+input:focus {
+  border-color: #ff66b2;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Botón con gradiente animado */
+button {
+  padding: 16px;
+  background: linear-gradient(135deg, #6a0dad, #ff66b2, #ff6600);
+  background-size: 200% 200%;
+  animation: buttonGradient 8s ease infinite;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes buttonGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Links con gradiente animado */
+.texto-registro {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.link-registro {
+  background: linear-gradient(135deg, #6a0dad, #ff66b2, #ff6600);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  animation: linkGradient 5s ease infinite;
+}
+
+.link-registro:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+@keyframes linkGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-contenedor {
+    flex-direction: column;
+  }
+
+  .seccion-bienvenida,
+  .seccion-login {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}

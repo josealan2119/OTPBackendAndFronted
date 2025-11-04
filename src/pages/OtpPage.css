@@ -1,0 +1,115 @@
+/* Contenedor principal */
+.otp-contenedor {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sección izquierda (diferente) */
+.otp-bienvenida {
+  flex: 1;
+  background: linear-gradient(to bottom, #6a0dad, #ff6600); /* degradado vertical */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.otp-bienvenida h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.otp-bienvenida p {
+  font-size: 18px;
+  max-width: 350px;
+  line-height: 1.5;
+}
+
+/* Sección derecha (formulario OTP) */
+.otp-formulario {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.otp-formulario h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+input {
+  padding: 16px 18px;
+  margin-bottom: 18px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: border 0.3s;
+  width: 100%;
+  text-align: center;
+}
+
+input:focus {
+  border-color: #ff66b2;
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 15px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+button {
+  padding: 16px;
+  background: linear-gradient(135deg, #6a0dad, #ff66b2, #ff6600);
+  background-size: 200% 200%;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .otp-contenedor {
+    flex-direction: column;
+  }
+
+  .otp-bienvenida,
+  .otp-formulario {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+}
